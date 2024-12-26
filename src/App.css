@@ -164,6 +164,8 @@ footer {
     margin-top: auto;
     position: relative;
     bottom: 0;
+    padding-bottom: 70px;
+    margin-bottom: 60px;
 }
 
 .footer-content {
@@ -205,7 +207,7 @@ footer {
 }
 
 .footer-copyright {
-    text-align: center;
+  text-align: center;
 }
 
 .footer-copyright p {
@@ -585,9 +587,9 @@ button[type="submit"] i {
 
 /* Ana container stil */
 .App {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Content alanı için stil */
@@ -601,7 +603,7 @@ main {
     top: 20px;
     right: 20px;
     display: flex;
-    align-items: center;
+  align-items: center;
     gap: 10px;
     padding: 15px 25px;
     background: white;
@@ -649,7 +651,7 @@ main {
 }
 
 @keyframes slideOut {
-    from {
+  from {
         transform: translateX(0);
         opacity: 1;
     }
@@ -731,4 +733,178 @@ main {
         margin-top: 10px;
         width: 100%;
     }
+}
+
+/* Blog Sayfası Temel Stiller */
+.blog-post {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Blog Başlıkları */
+.blog-article h2 {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 20px;
+  font-weight: 600;
+  padding: 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+/* İçerik Stilleri */
+.post-content {
+  padding: 20px;
+}
+
+.content-preview p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Genişletilmiş İçerik */
+.content-full {
+  position: relative;
+  padding: 0 20px;
+}
+
+.content-full h3 {
+  font-size: 1.4rem;
+  color: #000;
+  margin: 25px 0 15px;
+  font-weight: 600;
+}
+
+.content-full h4 {
+  font-size: 1.2rem;
+  color: #000;
+  margin: 20px 0 10px;
+  font-weight: 600;
+}
+
+.content-full p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #000;
+}
+
+/* Liste Stilleri */
+.content-full ul,
+.content-full ol {
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.content-full li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 8px 0;
+  padding: 8px 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Devamını Oku Butonu */
+button.read-more {
+  background: #000;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  margin: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+  display: inline-block;
+}
+
+/* İçerik açıkken buton stili */
+.content-full[style*="block"] + button.read-more {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  width: auto;
+  min-width: 150px;
+  text-align: center;
+  display: block;
+  background: #000;
+}
+
+button.read-more:hover {
+  background: #333;
+}
+
+/* Mobil için düzenleme */
+@media (max-width: 768px) {
+  .content-full[style*="block"] + button.read-more {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* Blog içeriği için container */
+.blog-article {
+  position: relative;
+  overflow: visible;
+}
+
+.post-content {
+  position: relative;
+}
+
+/* Meta Bilgileri */
+.post-meta {
+  padding: 0 20px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.post-meta span {
+  margin-right: 15px;
+}
+
+.post-meta i {
+  margin-right: 5px;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+  .blog-article h2 {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .post-content {
+    padding: 15px;
+  }
+
+  .content-full h3 {
+    font-size: 1.3rem;
+  }
+
+  .content-full h4 {
+    font-size: 1.1rem;
+  }
+
+  button.read-more {
+    padding: 6px 15px;
+    margin: 10px 15px;
+  }
 }

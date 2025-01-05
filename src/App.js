@@ -355,7 +355,7 @@ function App() {
   };
 
   const heroStyle = {
-    backgroundImage: 'url(/homepage.gif)',
+    backgroundImage: `url(./homepage.gif)`,
     backgroundPosition: 'center',
     backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
@@ -374,7 +374,7 @@ function App() {
           <div className="logo">
             <div className="logo-container">
               <img 
-                src="/logo_foti.jpg"
+                src="./logo_foti.jpg" 
                 alt="Logo" 
                 className="logo-image"
               />
@@ -693,7 +693,7 @@ function App() {
 
           {/* Sağ taraf - CV İndirme */}
           <div className="footer-cv">
-            <a href="/cv.pdf" download className="cv-download">
+            <a href="./cv.pdf" download className="cv-download">
               <i className="fas fa-file-pdf"></i>
               CV İndir
             </a>

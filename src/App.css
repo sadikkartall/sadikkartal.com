@@ -159,13 +159,13 @@ nav {
 footer {
     background-color: #1a1a1a;
     color: #fff;
-    padding: 1rem 0; /* Padding'i azalttık */
+    padding: 0.5rem 0;
     width: 100%;
-    margin-top: auto;
-    position: relative;
+    position: fixed;
     bottom: 0;
-    padding-bottom: 70px;
-    margin-bottom: 60px;
+    left: 0;
+    height: 60px;
+    z-index: 1001;
 }
 
 .footer-content {
@@ -174,6 +174,7 @@ footer {
     align-items: center;
     width: 100%;
     padding: 0 2rem;
+    height: 100%;
 }
 
 .footer-contact {
@@ -187,23 +188,23 @@ footer {
 .footer-item {
     display: flex;
     align-items: center;
-    gap: 0.3rem; /* Gap'i azalttık */
+    gap: 0.2rem;
 }
 
 .footer-item i {
+    font-size: 0.8rem;
     color: #fff;
-    font-size: 0.9rem; /* Font boyutunu küçülttük */
 }
 
 .footer-item a {
+    font-size: 0.8rem;
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 0.85rem; /* Font boyutunu küçülttük */
+    transition: opacity 0.3s ease;
 }
 
 .footer-item a:hover {
-    color: #ccc;
+    opacity: 0.8;
 }
 
 .footer-copyright {
@@ -211,7 +212,7 @@ footer {
 }
 
 .footer-copyright p {
-    font-size: 0.85rem; /* Font boyutunu küçülttük */
+    font-size: 0.8rem;
 }
 
 .cv-download {
@@ -220,11 +221,11 @@ footer {
     gap: 0.5rem;
     color: #fff;
     text-decoration: none;
-    padding: 0.4rem 0.8rem; /* Padding'i azalttık */
+    padding: 0.3rem 0.6rem;
     border: 1px solid #fff;
     border-radius: 5px;
     transition: all 0.3s ease;
-    font-size: 0.85rem; /* Font boyutunu küçülttük */
+    font-size: 0.8rem;
 }
 
 .cv-download:hover {
@@ -233,7 +234,7 @@ footer {
 }
 
 .cv-download i {
-    font-size: 0.9rem; /* İkon boyutunu küçülttük */
+    font-size: 0.8rem;
 }
 
 /* Responsive Tasarım */
@@ -256,7 +257,8 @@ footer {
 /* Bölüm Stilleri */
 section {
     padding: 2rem 10%;
-    margin-top: 100px; /* Header yüksekliği kadar margin ekledik */
+    margin-top: 100px;
+    margin-bottom: 80px;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -324,6 +326,7 @@ section {
     padding: 2rem 10%;
     margin-top: 100px; /* Header yüksekliği kadar margin */
     background: rgba(255, 255, 255, 0.9);
+    margin-bottom: 100px;
 }
 
 .contact-container {
@@ -590,11 +593,13 @@ button[type="submit"] i {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* Content alanı için stil */
 main {
-    flex: 1;
+  flex: 1;
+  margin-bottom: 80px;
 }
 
 /* Modern Bildirim Stilleri */
@@ -832,11 +837,11 @@ button.read-more {
 
 /* İçerik açıkken buton stili */
 .content-full[style*="block"] + button.read-more {
-  position: fixed;
+  position: sticky;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  margin: 0;
+  margin: 20px auto;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
   width: auto;
@@ -844,6 +849,8 @@ button.read-more {
   text-align: center;
   display: block;
   background: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 button.read-more:hover {
@@ -906,5 +913,47 @@ button.read-more:hover {
   button.read-more {
     padding: 6px 15px;
     margin: 10px 15px;
+  }
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+  .App {
+    padding-bottom: 120px;
+  }
+
+  footer {
+    height: 100px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Blog container için ek padding */
+.blog-container {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+/* Mobil için düzenlemeler */
+@media (max-width: 768px) {
+  main {
+    margin-bottom: 120px;
+  }
+
+  footer {
+    height: 100px;
+  }
+
+  section {
+    margin-bottom: 120px;
+  }
+
+  #iletisim {
+    margin-bottom: 140px;
   }
 }

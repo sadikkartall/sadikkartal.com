@@ -5,6 +5,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState('anasayfa');
   const [blogContent, setBlogContent] = useState('');
   const [siem_content, setSiemContent] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (currentPage === 'blog') {
@@ -384,7 +385,13 @@ function App() {
               </div>
             </div>
           </div>
-          <ul className="nav-links">
+          <button 
+            className="mobile-menu-btn"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <i className={`fas fa-${isMobileMenuOpen ? 'times' : 'bars'}`}></i>
+          </button>
+          <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
             <li><a href="#!" onClick={() => handlePageChange('anasayfa')}>Ana Sayfa</a></li>
             <li><a href="#!" onClick={() => handlePageChange('hakkimda')}>Hakkımda</a></li>
             <li className="dropdown">

@@ -31,9 +31,8 @@ body::before {
 header {
     position: fixed;
     width: 100%;
-    height: 100px; /* Yüksekliği artırdık */
+    height: 80px;
     background: #1a1a1a;
-    backdrop-filter: blur(10px);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 1000;
 }
@@ -42,15 +41,16 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%; /* Padding'i artırdık */
-    height: 100%; /* Nav'ı header'a göre ayarladık */
+    padding: 0 5%;
+    height: 100%;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    align-items: center;
-    height: 100%;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
@@ -1165,5 +1165,186 @@ button.read-more:hover {
 
   .hero-content p {
     font-size: 1rem;
+  }
+}
+
+/* Mobil menü butonunu varsayılan olarak gizle */
+.mobile-menu-btn {
+  display: none;
+}
+
+/* Mobil Düzenlemeler */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    height: 60px;
+  }
+
+  nav {
+    padding: 0 1rem;
+  }
+
+  /* Logo */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-image {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo-text {
+    display: none; /* Mobilde logo yazısını gizle */
+  }
+
+  /* Mobil Menü Butonu */
+  .mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  /* Mobil Navigasyon */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+
+  /* Dropdown Menü */
+  .dropdown-content {
+    position: static;
+    background: #2a2a2a;
+    width: 100%;
+    padding: 0;
+  }
+
+  .project-category {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .project-category:last-child {
+    border-bottom: none;
+  }
+
+  /* Footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    padding: 0.5rem 0;
+    height: auto;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .footer-contact {
+    display: none; /* Mobilde mail ve telefonu gizle */
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+
+  .cv-download {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Ana Sayfa */
+  .hero-content {
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  /* Genel Düzenlemeler */
+  section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 1rem;
+  }
+
+  /* Blog Sayfası */
+  .blog-post {
+    margin: 1rem 0;
+  }
+
+  .content-full[style*="block"] + button.read-more {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    min-width: 140px;
+    z-index: 1000;
+  }
+
+  /* İletişim Sayfası */
+  .contact-container {
+    padding: 1rem;
+  }
+
+  .contact-info-container,
+  .contact-form-container {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet için düzenlemeler */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
   }
 }

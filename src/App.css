@@ -79,12 +79,13 @@ nav {
 }
 
 .logo-image {
-    width: 85px; /* Logo boyutunu artırdık */
+    width: 85px;
     height: 85px;
     object-fit: cover;
     border-radius: 50%;
     background: #fff;
     padding: 3px;
+    border: 2px solid #fff;
 }
 
 .logo-text {
@@ -742,164 +743,115 @@ main {
 
 /* Blog Sayfası Temel Stiller */
 .blog-post {
-  background: #fff;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   overflow: hidden;
 }
 
-/* Blog Başlıkları */
-.blog-article h2 {
-  font-size: 1.8rem;
-  color: #000;
-  margin-bottom: 20px;
-  font-weight: 600;
-  padding: 20px;
-  background: #f8f9fa;
-  border-bottom: 1px solid #eee;
-}
-
-/* İçerik Stilleri */
-.post-content {
-  padding: 20px;
-}
-
-.content-preview p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-/* Genişletilmiş İçerik */
-.content-full {
-  position: relative;
-  padding: 0 20px;
-}
-
-.content-full h3 {
-  font-size: 1.4rem;
-  color: #000;
-  margin: 25px 0 15px;
-  font-weight: 600;
-}
-
-.content-full h4 {
-  font-size: 1.2rem;
-  color: #000;
-  margin: 20px 0 10px;
-  font-weight: 600;
-}
-
-.content-full p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-  margin: 10px 0;
-  padding: 10px 15px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  border-left: 3px solid #000;
-}
-
-/* Liste Stilleri */
-.content-full ul,
-.content-full ol {
-  padding-left: 20px;
-  margin: 15px 0;
-}
-
-.content-full li {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-  margin: 8px 0;
-  padding: 8px 15px;
-  background: #f8f9fa;
-  border-radius: 8px;
-}
-
-/* Devamını Oku Butonu */
-button.read-more {
-  background: #000;
-  color: #fff;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  border: none;
-  border-radius: 5px;
-  margin: 15px 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: auto;
-  display: inline-block;
-}
-
-/* İçerik açıkken buton stili */
-.content-full[style*="block"] + button.read-more {
-  position: sticky;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 20px auto;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  width: auto;
-  min-width: 150px;
-  text-align: center;
-  display: block;
-  background: #000;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-button.read-more:hover {
-  background: #333;
-}
-
-/* Mobil için düzenleme */
-@media (max-width: 768px) {
-  .content-full[style*="block"] + button.read-more {
-    width: 90%;
-    max-width: 300px;
-  }
-}
-
-/* Blog içeriği için container */
 .blog-article {
-  position: relative;
-  overflow: visible;
+  padding: 2rem;
 }
 
-.post-content {
-  position: relative;
+.blog-article h2 {
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-/* Meta Bilgileri */
 .post-meta {
-  padding: 0 20px;
-  margin-bottom: 15px;
-  font-size: 0.9rem;
+  display: flex;
+  gap: 1rem;
   color: #666;
+  margin-bottom: 1.5rem;
 }
 
 .post-meta span {
-  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.post-meta i {
-  margin-right: 5px;
+.post-content {
+  line-height: 1.8;
 }
 
-/* Responsive Düzenlemeler */
+.content-preview {
+  margin-bottom: 1rem;
+}
+
+.content-full {
+  margin-top: 1rem;
+}
+
+/* İçerik Stilleri */
+.content-full h3 {
+  color: #333;
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+}
+
+.content-full h4 {
+  color: #444;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.3rem;
+}
+
+.content-full p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.content-full ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.content-full li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Timeline Stilleri */
+.timeline {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.timeline-item {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid #007bff;
+}
+
+/* Devamını Oku Butonu */
+.read-more {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.read-more:hover {
+  background: #0056b3;
+}
+
+/* Mobil Düzenlemeler */
 @media (max-width: 768px) {
-  .blog-article h2 {
-    font-size: 1.5rem;
-    padding: 15px;
+  .blog-article {
+    padding: 1.5rem;
   }
 
-  .post-content {
-    padding: 15px;
+  .post-meta {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .content-full h3 {
@@ -909,14 +861,9 @@ button.read-more:hover {
   .content-full h4 {
     font-size: 1.1rem;
   }
-
-  button.read-more {
-    padding: 6px 15px;
-    margin: 10px 15px;
-  }
 }
 
-/* Responsive düzenlemeler */
+/* Responsive Düzenlemeler */
 @media (max-width: 768px) {
   .App {
     padding-bottom: 120px;
@@ -1009,7 +956,6 @@ button.read-more:hover {
     backdrop-filter: blur(10px);
     padding: 1rem 0;
     transform: translateY(-100%);
-    transition: transform 0.3s ease;
   }
 
   .nav-links.active {
@@ -1052,7 +998,7 @@ button.read-more:hover {
     grid-column: 1 / -1;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+  justify-content: center;
     gap: 1rem;
   }
 
@@ -1300,10 +1246,6 @@ button.read-more:hover {
     margin-bottom: 1rem;
   }
 
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-
   /* Genel Düzenlemeler */
   section {
     margin-top: 60px;
@@ -1346,5 +1288,280 @@ button.read-more:hover {
 
   .nav-links {
     gap: 1.5rem;
+  }
+}
+
+/* Favicon ve Logo Stilleri */
+link[rel="icon"],
+link[rel="apple-touch-icon"] {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo-image {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+  border: 2px solid #fff;
+}
+
+/* Mobil için logo düzenlemesi */
+@media (max-width: 768px) {
+  .logo-image {
+    width: 45px;
+    height: 45px;
+    padding: 2px;
+  }
+}
+
+/* Sunum indirme butonu stilleri */
+.presentation-download {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.download-button i {
+  font-size: 1.2rem;
+}
+
+/* Blog post stilleri güncelleme */
+.blog-post {
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.blog-article {
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .download-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .blog-article {
+    padding: 1.5rem;
+  }
+}
+
+/* Boş blog mesajı stilleri */
+.empty-blog-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.empty-blog-message i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.empty-blog-message h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.empty-blog-message p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .empty-blog-message {
+    padding: 2rem 1rem;
+  }
+  
+  .empty-blog-message i {
+    font-size: 2rem;
+  }
+  
+  .empty-blog-message h2 {
+    font-size: 1.5rem;
+  }
+  
+  .empty-blog-message p {
+    font-size: 1rem;
+  }
+}
+
+.application-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.area {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.area:hover {
+  transform: translateY(-5px);
+}
+
+.area h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.benefit {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+}
+
+.benefit h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .application-areas,
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantages-list, .limitations-list, .disadvantages-list {
+  margin: 1rem 0;
+  padding-left: 2rem;
+  list-style-type: disc;
+}
+
+.advantages-list li, .limitations-list li, .disadvantages-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.advantages-list strong, .limitations-list strong, .disadvantages-list strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.ai-security-examples {
+  margin: 2rem 0;
+}
+
+.example {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.example h5 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.example p {
+  margin-bottom: 1rem;
+}
+
+.example strong {
+  color: #007bff;
+}
+
+.ai-attacks, .ai-defenses {
+  margin: 2rem 0;
+}
+
+.attack-type, .defense-type {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.security-systems {
+  margin: 2rem 0;
+}
+
+.system {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.working-principles {
+  margin-top: 1.5rem;
+}
+
+.principle {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.principle ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.principle li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .attack-type, .defense-type, .system, .principle {
+    padding: 1rem;
   }
 }
